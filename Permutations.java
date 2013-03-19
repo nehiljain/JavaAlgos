@@ -1,5 +1,11 @@
 import java.io.*;
 
+/**
+* Code is learnt and implemented from http://programminggeeks.com/recursive-permutation-in-java/ \
+* It creates permutation of all the characters of ANY given string in assending order of the characters..
+*
+*/
+
 public class Permutations{
 	public static void permute(String beginStr, String endStr){
 
