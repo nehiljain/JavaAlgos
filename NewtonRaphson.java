@@ -8,7 +8,11 @@ import java.io.*;
  * number and returns its square-root. You may not use built-in square root function 
  * from your language. However, basic operators like addition, subtraction, 
  * multiplication are allowed. Please take into consideration the floating precision.
- * 
+ * Solution  
+ * Step 1: Set the value of guess to 1
+ * Step 2: if |guess*guess - x| < epsilon, proceed to step 4
+ * Step 3: Set the value of guess to (x / guess + guess) / 2 and return to step 2
+ * Step 4: The  guess is the approximation of the square root.
  * 
  * 
  * 
