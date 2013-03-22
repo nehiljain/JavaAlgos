@@ -6,7 +6,7 @@ class BoyerMooreAlgo{
 	private int occurences[];
 
 	public void badCharHeuristic(String pattern){
-		occurences = new int[BASE];
+		occurences = new int[BASE]; // array  to store occurence of all possible characters 
 
 		for(int i = 0; i < BASE; i++)
 		{
@@ -26,9 +26,11 @@ class BoyerMooreAlgo{
 		int skip;
 		for( int i = 0; i < n - m + 1; i += skip){
 			skip = 0;
+
 			for(int j = m - 1; j >= 0; j--){
 
 				if(pattern.charAt(j) != text.charAt(i+j)) {
+					//calculate the skip by shifting the patttern to match the string of the text
 				skip = Math.max(1, j - occurences[text.charAt(i+j)]);
 				break;
 				}		
@@ -37,7 +39,7 @@ class BoyerMooreAlgo{
 		}
 
 		
-		return n;
+		return -1;
 	}
 	
 }
