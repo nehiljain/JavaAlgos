@@ -16,9 +16,12 @@ class Test{
 		
 		*/
 		SList sListObj = new SList();
-		sListObj.insertFront(12);
-		sListObj.insertFront(13);
+		sListObj.insertFront(512);
+		sListObj.insertFront(513);
+		sListObj.insertFront(514);
 		sListObj.printList();
+		sListObj.printListHead();
+		sListObj.printListTail();
 
 		System.out.println("\n\n-----------------------------Ends TEST World!---------------------------"
 			+"---------------\n\n\n");
