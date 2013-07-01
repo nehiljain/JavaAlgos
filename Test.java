@@ -17,11 +17,23 @@ class Test{
 		*/
 		SList sListObj = new SList();
 		sListObj.insertFront(512);
-		sListObj.insertFront(513);
-		sListObj.insertFront(514);
-		sListObj.printList();
+		sListObj.insertBehind(513);
+		sListObj.insertBehind(514);
+		sListObj.insertBehind(555);
+		sListObj.insertBehind(565);
+		sListObj.insertBehind(505);
+		sListObj.insertBehind(515);
+		sListObj.insertBehind(535);
+		sListObj.insertBehind(545);
+		sListObj.insertFront(52);
+		sListObj.insertBehind(53);
+		sListObj.insertBehind(54);
 		sListObj.printListHead();
-		sListObj.printListTail();
+		sListObj.printList();
+		sListObj.iterateReverseList();
+		sListObj.printList();
+		 sListObj.printListHead();
+		// sListObj.printListTail();
 
 		System.out.println("\n\n-----------------------------Ends TEST World!---------------------------"
 			+"---------------\n\n\n");
