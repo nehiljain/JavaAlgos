@@ -9,13 +9,19 @@ public class BST<Key extends Comparable<Key>, Value> {
 		private Value val;
 		private Node left, right;
 
-		public Node(Key key, Value val) {
+
+		public Node(Key key, Value val, int n) {
 			this.key = key;
 			this.val = val;
+
 		}
 	}
+	//Client function to get value associated wit ha key
+	public Value get(Key key) {
+		return get(root, key);
+	}
 
-	public Value get(Node x, Key key) {
+	private Value get(Node x, Key key) {
 
 		if (x == null) {
 			return null;
@@ -30,9 +36,6 @@ public class BST<Key extends Comparable<Key>, Value> {
 			return get(x.right,key);
 		}
 		else return x.val;
-
-
-
 	}
 
 
@@ -40,26 +43,34 @@ public class BST<Key extends Comparable<Key>, Value> {
 	public void put(Key key, Value val) {
 
 		root = put(root, key, val);
-		assert check();
+		// assert check();
 
 	}
 
 	private Node put(Node x, Key key, Value val) {
 
-		if (x == Null) {
+		if (x == null) {
 			return new Node(key, val);
 		}
 
 		int cmpResult = key.compareTo(x.key);
 		// Incomplete
+		if (cmpResult < 0) {
+			x.left = put(x.left, key, val);
+		}
+		else if (cmpResult >0 ) {
+			x.right = put(x.right, key, val);
+		}
+		else x.val = val;
 
+		return x;
 	}
 
 
 
 
 /********************************************************
-Test Client
+*Test Client
 ********************************************************/
 
 
@@ -67,6 +78,14 @@ Test Client
 		System.out.print(" This is the test client for BST \n");
 
 		BST<String, Integer> bstree = new BST<String, Integer>();
+
+
+		bstree.put("A", 23);
+		bstree.put("D", 30);
+		bstree.put("E", 32);
+		bstree.put("B", 12);
+		bstree.put("I", 4);
+		bstree.put("C", 0);
 
 		System.out.print("Putting some pairs \n");
 		
@@ -76,13 +95,12 @@ Test Client
 
 		System.out.print("get some pairs \n");
 
-
+		System.out.print(Integer.toString(bstree.get("I")));
+		System.out.print(Integer.toString(bstree.get("A")));
+		System.out.print(Integer.toString(bstree.get("C")));
+		System.out.print(Integer.toString(bstree.get("T")));
 
 		//get some keys
-
-
-
-
 
 	}
 
