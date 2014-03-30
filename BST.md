@@ -17,6 +17,7 @@
 	- Value
 	- A ref. to left tree
     - A ref. to right tree
+    - Count (for ranking and size!!)
 - A class BST
     - has comparable keys
     - global field - root node of the tree
@@ -25,6 +26,10 @@
         - put
             - reset the value if it exists
             - create a node with the value if it does not
+        - #Ordered Data Operations
+            - min, max
+            - floor and ceil (Think about the number of cases)
+            - rank (think cases)
         - iterable
         - delete
 - It corresponds Quick Sort partitioning!

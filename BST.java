@@ -8,15 +8,35 @@ public class BST<Key extends Comparable<Key>, Value> {
 		private Key key;
 		private Value val;
 		private Node left, right;
-
+		private int N;
 
 		public Node(Key key, Value val, int n) {
 			this.key = key;
 			this.val = val;
-
+			this.N = n;
 		}
 	}
-	//Client function to get value associated wit ha key
+
+	public boolean isEmpty() {
+		if (size(root) == 0) return true;
+		else return false;
+	}
+
+	public int size() {
+		return size(root);
+	}
+
+	private int size(Node x) {
+		if (x == null) {
+			return 0;
+		}
+		else {
+			return x.N;
+		}
+	}
+
+
+	//Client function to get value associated with the key
 	public Value get(Key key) {
 		return get(root, key);
 	}
@@ -50,7 +70,7 @@ public class BST<Key extends Comparable<Key>, Value> {
 	private Node put(Node x, Key key, Value val) {
 
 		if (x == null) {
-			return new Node(key, val);
+			return new Node(key, val, 1);
 		}
 
 		int cmpResult = key.compareTo(x.key);
@@ -63,11 +83,66 @@ public class BST<Key extends Comparable<Key>, Value> {
 		}
 		else x.val = val;
 
+		x.N = 1 + size(x.left) + size(x.right);
+
 		return x;
+	}
+
+	public Key min() {
+		if (this.isEmpty()) {
+			return null;
+		}
+
+		return min(root).key;
+	}
+
+	private Node min(Node x) {
+		if (x.left == null) return x;
+		else return min(x.left);
+	}
+
+	public Key max() {
+		if (this.isEmpty()) {
+			return null;
+		}
+
+		return max(root).key;
+	}
+
+	private Node max(Node x) {
+		if (x.right == null) return x;
+		else return max(x.right);
 	}
 
 
 
+	public Key floor(Key key) {
+		if (this.isEmpty ()) return null;
+		else return floor(root, key).key;
+	}
+
+	private Node floor(Node x, Key key) {
+		if (x == null)	return null;
+		//If the client key is present in the tree then that is the floor of the key
+		//If the client key is smaller than the key of the node then find the floor in the left subtree to the present node.
+		//**@Tricky** If the client key is greater than the key of the node then find the floor int he right,
+		//if it is a null then the present node is the floor 
+		int cmpResult = key.compareTo(x.key);
+		if (cmpResult == 0) {
+			return x; 
+		}
+		else if (cmpResult < 0) {
+			return floor(x.left, key);
+		}
+		else {
+			Node t = floor(x.right, key);
+			if (t == null) {
+				return x;
+			}
+			else return t;
+		}
+
+	}
 
 /********************************************************
 *Test Client
@@ -80,27 +155,33 @@ public class BST<Key extends Comparable<Key>, Value> {
 		BST<String, Integer> bstree = new BST<String, Integer>();
 
 
-		bstree.put("A", 23);
+
+		System.out.print("Putting some pairs \n");
+
+		bstree.put("K", 23);
 		bstree.put("D", 30);
 		bstree.put("E", 32);
 		bstree.put("B", 12);
 		bstree.put("I", 4);
 		bstree.put("C", 0);
 
-		System.out.print("Putting some pairs \n");
-		
-
-
-
-
 		System.out.print("get some pairs \n");
 
 		System.out.print(Integer.toString(bstree.get("I")));
-		System.out.print(Integer.toString(bstree.get("A")));
 		System.out.print(Integer.toString(bstree.get("C")));
-		System.out.print(Integer.toString(bstree.get("T")));
+		System.out.print("\n\nSize () " + Integer.toString(bstree.size()));
+		System.out.print("\n\nMin () " + bstree.min());
 
+
+		bstree.put("F", 12);
+		bstree.put("U", 4);
+		bstree.put("A", 0);
 		//get some keys
+		System.out.print("\n\nSize () " + Integer.toString(bstree.size()));
+		System.out.print("\n\nMin () " + bstree.min());
+		System.out.print("\n\nMax () " + bstree.max() + "\n\n");
+		System.out.print("\n\nFloor () " + bstree.floor("Q") + "\n\n");
+
 
 	}
 
