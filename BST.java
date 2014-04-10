@@ -144,6 +144,35 @@ public class BST<Key extends Comparable<Key>, Value> {
 
 	}
 
+
+	// rank and select operations
+	public int rank(Key key) {
+		if (this.isEmpty()) return null;
+		else return rank(Key key, Node root);
+	}
+
+	private int rank(Key key, Node x) {
+
+		if (x == null) {
+			return null;
+		}
+		int cmpResult = key.compareTo(x.key);
+		if (cmpResult > 0) {
+			//so the node itself (1) then its left subtree and the rank in  the right subtree
+			return 1 + size(x.left) + rank(key, x.right); 
+		}
+		else if (cmpResult < 0) {
+			return rank(key, x.left);
+		}
+		else {
+			return size(x.left);
+		}
+
+
+	}
+
+
+
 /********************************************************
 *Test Client
 ********************************************************/
