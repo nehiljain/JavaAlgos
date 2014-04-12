@@ -145,33 +145,114 @@ public class BST<Key extends Comparable<Key>, Value> {
 	}
 
 
-	// rank and select operations
-	public int rank(Key key) {
-		if (this.isEmpty()) return null;
-		else return rank(Key key, Node root);
+	// // rank and select operations
+	// public int rank(Key key) {
+	// 	if (this.isEmpty()) return null;
+	// 	else return rank(Key key, Node root);
+	// }
+
+	// private int rank(Key key, Node x) {
+
+	// 	if (x == null) {
+	// 		return null;
+	// 	}
+	// 	int cmpResult = key.compareTo(x.key);
+	// 	if (cmpResult > 0) {
+	// 		//so the node itself (1) then its left subtree and the rank in  the right subtree
+	// 		return 1 + size(x.left) + rank(key, x.right); 
+	// 	}
+	// 	else if (cmpResult < 0) {
+	// 		return rank(key, x.left);
+	// 	}
+	// 	else {
+	// 		return size(x.left);
+	// 	}
+
+
+	// }
+
+/********************************************************
+*Traversal
+********************************************************/
+
+	public void inOrder() {
+		System.out.print("In Order Traversal begins: ");
+		inOrder(root);
+		
 	}
 
-	private int rank(Key key, Node x) {
+	private void inOrder(Node node) {
+		//traverses the tree in order.
+		if (node == null) { 
+			return;
+		}
+		inOrder(node.left);
+		System.out.print(node.key +" : "+ node.val + ", ");
+		inOrder(node.right);
+	}
 
-		if (x == null) {
-			return null;
-		}
-		int cmpResult = key.compareTo(x.key);
-		if (cmpResult > 0) {
-			//so the node itself (1) then its left subtree and the rank in  the right subtree
-			return 1 + size(x.left) + rank(key, x.right); 
-		}
-		else if (cmpResult < 0) {
-			return rank(key, x.left);
-		}
-		else {
-			return size(x.left);
+	public void postOrder() {
+		System.out.print("\n\npostOrder Traversal begins : ");
+		postOrder(root);
+	}
+
+	private void postOrder(Node node) {
+		if (node == null) {
+			return;
 		}
 
+		postOrder(node.left);
+		postOrder(node.right);
+		System.out.print(node.key + " : " + node.val + ", ");
+	}
 
+	public void preOrder() {
+		System.out.print("\n\n preOrder Traversal starts");
+		preOrder(root);
+	}
+
+	public void preOrder(Node node) {
+
+		if (node == null) {
+			return;
+		}
+
+		System.out.print(node.key +" : "+ node.val + ", ");
+		preOrder(node.left);
+		preOrder(node.right);
 	}
 
 
+/********************************************************
+*Lowest Common Ancestor	
+********************************************************/
+
+public Key lowestCommonAncestor(Key key1, Key key2) {
+	if (this.isEmpty()) return null;
+	else return lowestCommonAncestor(root, key1, key2).key;
+}
+
+private Node lowestCommonAncestor(Node node, Key key1, Key key2) {
+
+	if (node == null) {
+		return;
+	}
+
+	int cmpResult = key.compareTo(node.key);
+
+	if (cmpResult == 0) {
+		return node;
+	}
+	else if (cmpResult < 0) {
+		return lowestCommonAncestor(node.left, key1, key2);
+	}
+	else {
+		return lowestCommonAncestor(node.right, key1, key2);
+	}
+
+
+
+}
 
 /********************************************************
 *Test Client
@@ -211,6 +292,10 @@ public class BST<Key extends Comparable<Key>, Value> {
 		System.out.print("\n\nMax () " + bstree.max() + "\n\n");
 		System.out.print("\n\nFloor () " + bstree.floor("Q") + "\n\n");
 
+
+		bstree.preOrder();
+		bstree.inOrder();
+		bstree.postOrder();
 
 	}
 

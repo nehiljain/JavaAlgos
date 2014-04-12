@@ -35,5 +35,19 @@
 - It corresponds Quick Sort partitioning!
 - Analysis
     - AVG - 2 Ln N for search/insert
-    - Worst Case - N
-- 
+    - Worst Case - z
+
+
+# Traversal
+=================================
+- IN Order
+    - Defn: begins at the left most node and ends at the right most node
+    - USE: to retrieve the order in which the nodes were entered.
+    - USE: Flatten the tree in the same way it was created
+
+- PRE Order
+    - Defn: begins at the root node and ends at the right most node
+    - USE: if you want to explore the roots before the roots
+- POST Order
+    - Defn: begins at the left most node and ends at the root node
+    - USE: if you want to explore the leaves before the any nodes.
