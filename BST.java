@@ -225,6 +225,7 @@ public class BST<Key extends Comparable<Key>, Value> {
 
 /********************************************************
 *Lowest Common Ancestor	
+*http://opensourceforgeeks.blogspot.in/2014/02/lowest-common-ancestor-in-binary-search.html
 ********************************************************/
 
 public Key lowestCommonAncestor(Key key1, Key key2) {
@@ -235,22 +236,21 @@ public Key lowestCommonAncestor(Key key1, Key key2) {
 private Node lowestCommonAncestor(Node node, Key key1, Key key2) {
 
 	if (node == null) {
-		return;
+		return null;
 	}
 
-	int cmpResult = key.compareTo(node.key);
+	int cmpResult1 = key1.compareTo(node.key);
+	int cmpResult2 = key2.compareTo(node.key);
 
-	if (cmpResult == 0) {
-		return node;
-	}
-	else if (cmpResult < 0) {
+	if (cmpResult1 < 0 && cmpResult2 < 0) {
 		return lowestCommonAncestor(node.left, key1, key2);
 	}
-	else {
+	else if(cmpResult2 > 0 && cmpResult1 > 0) {
 		return lowestCommonAncestor(node.right, key1, key2);
+	} 
+	else {
+		return node;
 	}
-
-
 
 }
 
@@ -296,6 +296,30 @@ private Node lowestCommonAncestor(Node node, Key key1, Key key2) {
 		bstree.preOrder();
 		bstree.inOrder();
 		bstree.postOrder();
+
+
+		BST<Integer, Integer> bstreeInt = new BST<Integer, Integer>();
+		System.out.print("Putting some pairs \n");
+
+		bstreeInt.put(20, 23);
+		bstreeInt.put(8, 30);
+		bstreeInt.put(22, 22);
+		bstreeInt.put(4, 4);
+		bstreeInt.put(12, 12);
+		bstreeInt.put(10, 10);
+		bstreeInt.put(14, 14);
+
+		System.out.print("get some pairs \n");
+		System.out.print(Integer.toString(bstreeInt.get(20)));
+		System.out.print(Integer.toString(bstreeInt.get(8)));
+		System.out.print(Integer.toString(bstreeInt.get(22)));
+
+		System.out.print("\n\nLCA of 20 and 8 ::"+ bstreeInt.lowestCommonAncestor(20,8)+"\n");
+		System.out.print("\n\nLCA of 4 and 12 ::"+ bstreeInt.lowestCommonAncestor(4,12)+"\n");
+		System.out.print("\n\nLCA of 8 and 14 ::"+ bstreeInt.lowestCommonAncestor(8,14)+"\n");
+		System.out.print("\n\nLCA of 10 and 14 ::"+ bstreeInt.lowestCommonAncestor(10,14)+"\n");
+
+
 
 	}
 
