@@ -211,7 +211,7 @@ public class BST<Key extends Comparable<Key>, Value> {
 		preOrder(root);
 	}
 
-	public void preOrder(Node node) {
+	private void preOrder(Node node) {
 
 		if (node == null) {
 			return;
@@ -220,6 +220,20 @@ public class BST<Key extends Comparable<Key>, Value> {
 		System.out.print(node.key +" : "+ node.val + ", ");
 		preOrder(node.left);
 		preOrder(node.right);
+	}
+
+	public void maxHeight() {
+		System.out.print("\n\n maxHeight = " + Integer.toString(maxHeight(root, 0)));
+	}
+
+	private int maxHeight(Node node, int height) {
+		if(node == null) return 0;
+
+		int maxLeftHeight = maxHeight(node.left, 0);
+		int maxRightHeight = maxHeight(node.right, 0);
+
+		return Math.max(maxLeftHeight, maxRightHeight) + 1;
+
 	}
 
 
@@ -305,9 +319,19 @@ private Node lowestCommonAncestor(Node node, Key key1, Key key2) {
 		bstreeInt.put(8, 30);
 		bstreeInt.put(22, 22);
 		bstreeInt.put(4, 4);
-		bstreeInt.put(12, 12);
-		bstreeInt.put(10, 10);
+		bstreeInt.put(10, 12);
+		bstreeInt.put(12, 10);
+		bstreeInt.put(13, 14);
 		bstreeInt.put(14, 14);
+		bstreeInt.put(16, 14);
+		bstreeInt.put(17, 14);
+		bstreeInt.put(18, 14);
+		bstreeInt.put(19, 14);
+		bstreeInt.put(28, 14);
+		
+
+		
+
 
 		System.out.print("get some pairs \n");
 		System.out.print(Integer.toString(bstreeInt.get(20)));
@@ -319,7 +343,10 @@ private Node lowestCommonAncestor(Node node, Key key1, Key key2) {
 		System.out.print("\n\nLCA of 8 and 14 ::"+ bstreeInt.lowestCommonAncestor(8,14)+"\n");
 		System.out.print("\n\nLCA of 10 and 14 ::"+ bstreeInt.lowestCommonAncestor(10,14)+"\n");
 
+		System.out.print("get some pairs \n\n");
+		bstreeInt.inOrder();
 
+		bstreeInt.maxHeight();
 
 	}
 
