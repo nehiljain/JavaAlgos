@@ -227,7 +227,7 @@ public class BST<Key extends Comparable<Key>, Value> {
 	}
 
 	private int maxHeight(Node node, int height) {
-		if(node == null) return 0;
+		if (node == null) return 0;
 
 		int maxLeftHeight = maxHeight(node.left, 0);
 		int maxRightHeight = maxHeight(node.right, 0);
@@ -235,6 +235,24 @@ public class BST<Key extends Comparable<Key>, Value> {
 		return Math.max(maxLeftHeight, maxRightHeight) + 1;
 
 	}
+
+	/*** 
+	 Given a tree and a sum, returns true if there is a path from the root 
+	 down to a leaf, such that adding up all the values along the path 
+	 equals the given sum.
+	 Strategy: subtract the node value from the sum when recurring down, 
+	 and check to see if the sum is 0 when you run out of tree. 
+	*/
+	// public boolean hasPathSum(int sum) {
+	// 	return hasPathSum(root, sum);
+	// }
+
+	// private boolean hasPathSum(Node node, int sum) {
+	// 	if (node == null) return (sum == 0);
+
+	// 	int remainingSum = sum - Integer.valueOf((String)node.val);
+	// 	return (hasPathSum(node.left,remainingSum) || hasPathSum(node.right, remainingSum));
+	// }
 
 
 /********************************************************
@@ -259,7 +277,7 @@ private Node lowestCommonAncestor(Node node, Key key1, Key key2) {
 	if (cmpResult1 < 0 && cmpResult2 < 0) {
 		return lowestCommonAncestor(node.left, key1, key2);
 	}
-	else if(cmpResult2 > 0 && cmpResult1 > 0) {
+	else if (cmpResult2 > 0 && cmpResult1 > 0) {
 		return lowestCommonAncestor(node.right, key1, key2);
 	} 
 	else {
@@ -347,7 +365,7 @@ private Node lowestCommonAncestor(Node node, Key key1, Key key2) {
 		bstreeInt.inOrder();
 
 		bstreeInt.maxHeight();
-
+		bstreeInt.hasPathSum(32);
 	}
 
 
