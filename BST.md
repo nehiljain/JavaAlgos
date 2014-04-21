@@ -72,3 +72,19 @@ Append an item to the end of the queue.
 Remove an item from the front of the queue.
 Return the ith item in the queue.
 Remove the ith item from the queue.
+
+
+
+Red-Black trees
+==========================
+version:left-leaning red black tree - LLRB
+
+* It represents a 2-3 tree in a BST. Hence *all red-black trees are BSTs*.
+* *Search is the same as BST(ignore the color)*
+* Change the node class to have a boolean color feature
+* Insertions in a LLRB tree
+* Always attach a new node with red color
+* Insertion cases
+    - Right child red and left child black : rotate left
+    - Left Child, left left grand child red : rotate right
+    - both children red : flip color
