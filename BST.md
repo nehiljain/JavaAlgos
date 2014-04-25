@@ -72,3 +72,24 @@ Append an item to the end of the queue.
 Remove an item from the front of the queue.
 Return the ith item in the queue.
 Remove the ith item from the queue.
+
+
+
+
+
+
+
+
+Hashing
+=============
+
+
+Difference between hashmap and hashtable in java is that Hashmap is unsynchronised and permits nulls.
+
+
+Hashmap does not guarantee that the order will remain smae over time.
+
+2 params to create it - Initial capacity and load factor    
+
+
+
