@@ -31,6 +31,17 @@ public class P3 {
 	}
 	
 	public String removeDulplicates(String s) {
+		
+		//Null String CHECK
+		if (s == null) return null;
+		
+		//Empty string check
+		if (s.isEmpty()) return null;
+		
+		//If it is only one character string
+		if (s.length() == 1) return s;
+		
+		
 		int pos = 0;
 		this.markUniqueChar(s);
 		
@@ -70,6 +81,8 @@ public class P3 {
 		String testString4 = "faaaaa";
 		String testString5 = "faaaaaww";
 		String testString6 = "aaaaww";
+		String testString7 = "awertyu";
+		
 		
 		P3 obj = new P3();
 		System.out.println(obj.removeDulplicates(testString1));
@@ -78,6 +91,7 @@ public class P3 {
 		System.out.println(obj.removeDulplicates(testString4));
 		System.out.println(obj.removeDulplicates(testString5));
 		System.out.println(obj.removeDulplicates(testString6));
+		System.out.println(obj.removeDulplicates(testString7));
 	}
 	
 }
