@@ -59,5 +59,11 @@ public class P6 {
 		obj.printStringArray(test4, 4);
 		obj.rotate90(test4, 4);
 		obj.printStringArray(test4, 4);
+		obj.printStringArray(test3, 3);
+		obj.rotate90(test3, 3);
+		obj.printStringArray(test3, 3);
+		obj.printStringArray(test2, 2);
+		obj.rotate90(test2, 2);
+		obj.printStringArray(test2, 2);
 	}
 }
