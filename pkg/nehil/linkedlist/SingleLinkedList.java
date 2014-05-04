@@ -14,7 +14,7 @@ public class SingleLinkedList {
 		size = 0;
 	}
 	
-	public void insertFront(Object item) {
+	public void insertFront(int item) {
 		head = new ListNode(item, head);
 		size++;
 	}
