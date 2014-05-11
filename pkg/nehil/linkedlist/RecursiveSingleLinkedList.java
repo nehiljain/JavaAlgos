@@ -2,6 +2,8 @@ package pkg.nehil.linkedlist;
 
 
 public class RecursiveSingeLinkedList {
+	private ListNode head;
+	private int size;
 
 	private static class ListNode {
 		public int item;
@@ -20,20 +22,8 @@ public class RecursiveSingeLinkedList {
 
 	}
 
-	private static class SingleLinkedList {
-		public ListNode head;
 
-		public SingleLinkedList() {
-			head = null;	
-		}
-
-		public ListNode getHead() {
-			return this.head;
-		}
-	}
-
-
-
+	
 
 
 
