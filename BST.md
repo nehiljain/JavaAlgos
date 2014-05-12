@@ -73,13 +73,6 @@ Return the ith item in the queue.
 Remove the ith item from the queue.
 
 
-
-<<<<<<< HEAD
-
-
-
-
-
 Hashing
 =============
 
@@ -107,4 +100,30 @@ version:left-leaning red black tree - LLRB
     - Right child red and left child black : rotate left
     - Left Child, left left grand child red : rotate right
     - both children red : flip color
->>>>>>> 0c7689c7212dda06fc3d577b216a08c31463fc66
+
+
+
+
+
+
+
+
+
+
+
+
+Linked List - 
+[Linked-list implementations of collections](http://algs4.cs.princeton.edu/13stacks/) 
+    
+    - Implement Iterable
+    - Use a static subclass Node
+    - Use recursion to iterate forward and reverse
+
+Generics - A way to create a name for a type param
+
+
+
+Stacks
+#####################################
+
+[Java Interview Questions and Answers](http://java-success.blogspot.ca/2012/04/java-stack-data-structure-interview.html)
