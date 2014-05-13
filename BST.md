@@ -1,4 +1,4 @@
-
+===========================
 # Binary Search Tree
 ===========================
 
@@ -36,9 +36,11 @@
     - AVG - 2 Ln N for search/insert
     - Worst Case - z
 
-
+========================
 # Traversal
-=================================
+========================
+
+
 - IN Order
     - Defn: begins at the left most node and ends at the right most node
     - USE: to retrieve the order in which the nodes were entered.
@@ -54,9 +56,9 @@
 
 
 
-
+=============================
 Some Problems
-===============================
+=============================
 
 - Question 1 
 Red-black BST with no extra memory. Describe how to save the memory for storing the color information when implementing a red-black BST.
@@ -73,13 +75,7 @@ Return the ith item in the queue.
 Remove the ith item from the queue.
 
 
-
-<<<<<<< HEAD
-
-
-
-
-
+=============
 Hashing
 =============
 
@@ -93,10 +89,11 @@ Hashmap does not guarantee that the order will remain smae over time.
 
 
 
-=======
+==========================
 Red-Black trees
 ==========================
-version:left-leaning red black tree - LLRB
+
+version: left-leaning red black tree - LLRB
 
 * It represents a 2-3 tree in a BST. Hence *all red-black trees are BSTs*.
 * *Search is the same as BST(ignore the color)*
@@ -107,4 +104,12 @@ version:left-leaning red black tree - LLRB
     - Right child red and left child black : rotate left
     - Left Child, left left grand child red : rotate right
     - both children red : flip color
->>>>>>> 0c7689c7212dda06fc3d577b216a08c31463fc66
+
+
+Autoboxing
+================
+
+
+* Integer a = null; // runtime error primitive type cannot store *null*.
+* the same immutable Integer objects (Java's implementation of valueOf() retrieves a cached values if the integer is between -128 and 127), while Java constructs new objects for each integer outside this range.[Here](http://algs4.cs.princeton.edu/13stacks/)
+* 
