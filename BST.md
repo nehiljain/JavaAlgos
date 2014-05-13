@@ -1,4 +1,19 @@
-===========================
+=======
+# ENUM
+=======
+[enum-in-java-example-tutorial](http://javarevisited.blogspot.ca/2011/08/enum-in-java-example-tutorial.html)
+Uses:
+
+* To write a *Singleton* in JAVA
+* To represent constants with constatnt states
+
+Advantages:
+
+* Type safe
+* can be usedin switch statements
+* should have private construtor
+
+
 # Binary Search Tree
 ===========================
 
@@ -74,8 +89,13 @@ Remove an item from the front of the queue.
 Return the ith item in the queue.
 Remove the ith item from the queue.
 
+Binary Trees (NOT BST)
+================
+[Lowest Common Ancestor](http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-tree-part-i.html)
 
-=============
+This will also solve find the min path between two keys in Binary Tree.
+
+
 Hashing
 =============
 
@@ -113,3 +133,44 @@ Autoboxing
 * Integer a = null; // runtime error primitive type cannot store *null*.
 * the same immutable Integer objects (Java's implementation of valueOf() retrieves a cached values if the integer is between -128 and 127), while Java constructs new objects for each integer outside this range.[Here](http://algs4.cs.princeton.edu/13stacks/)
 * 
+=======
+
+
+
+
+
+
+
+
+
+
+Linked List - 
+[Linked-list implementations of collections](http://algs4.cs.princeton.edu/13stacks/) 
+    
+    - Implement Iterable
+    - Use a static subclass Node
+    - Use recursion to iterate forward and reverse
+
+Generics - A way to create a name for a type param
+
+
+
+Stacks
+=========
+
+[Java Interview Questions and Answers](http://java-success.blogspot.ca/2012/04/java-stack-data-structure-interview.html)
+
+Java has Deque (pronouced deck) as a more efficient LIFO Data structure. Better than a stack. You can create a deque which stores the elements in a linkedlist or array internally using LinkedList or ArrayDeque, resp.
+
+Important Points
+-------------------------
+
+
+Further
+--------------
+ - http://algs4.cs.princeton.edu/13stacks/ how to implement listiterator and arrayiterator
+ - Q + A
+ - JUNIT example, simple intro
+ - Cloning http://www.java-questions.com/Cloning_interview_questions.html, http://javapapers.com/core-java/java-clone-shallow-copy-and-deep-copy/
+ - LCA, RMQ
+
