@@ -1,7 +1,8 @@
-=======
+
 # ENUM
 =======
 [enum-in-java-example-tutorial](http://javarevisited.blogspot.ca/2011/08/enum-in-java-example-tutorial.html)
+
 Uses:
 
 * To write a *Singleton* in JAVA
@@ -12,6 +13,14 @@ Advantages:
 * Type safe
 * can be usedin switch statements
 * should have private construtor
+
+Autoboxing
+================
+[Reference](http://algs4.cs.princeton.edu/13stacks/Autoboxing.java.html)
+
+* Integer a = null; // runtime error primitive type cannot store *null*.
+* the same immutable Integer objects (Java's implementation of valueOf() retrieves a cached values if the integer is between -128 and 127), while Java constructs new objects for each integer outside this range.[Here](http://algs4.cs.princeton.edu/13stacks/)
+
 
 
 # Binary Search Tree
@@ -51,10 +60,9 @@ Advantages:
     - AVG - 2 Ln N for search/insert
     - Worst Case - z
 
-========================
+
 # Traversal
 ========================
-
 
 - IN Order
     - Defn: begins at the left most node and ends at the right most node
@@ -126,20 +134,6 @@ version: left-leaning red black tree - LLRB
     - both children red : flip color
 
 
-Autoboxing
-================
-
-
-* Integer a = null; // runtime error primitive type cannot store *null*.
-* the same immutable Integer objects (Java's implementation of valueOf() retrieves a cached values if the integer is between -128 and 127), while Java constructs new objects for each integer outside this range.[Here](http://algs4.cs.princeton.edu/13stacks/)
-* 
-=======
-
-
-
-
-
-
 
 
 
@@ -166,7 +160,7 @@ Important Points
 -------------------------
 
 
-Further
+To-do
 --------------
  - http://algs4.cs.princeton.edu/13stacks/ how to implement listiterator and arrayiterator
  - Q + A
