@@ -1,4 +1,19 @@
 
+# ENUM
+=======
+[enum-in-java-example-tutorial](http://javarevisited.blogspot.ca/2011/08/enum-in-java-example-tutorial.html)
+Uses:
+
+* To write a *Singleton* in JAVA
+* To represent constants with constatnt states
+
+Advantages:
+
+* Type safe
+* can be usedin switch statements
+* should have private construtor
+
+
 # Binary Search Tree
 ===========================
 
@@ -72,6 +87,14 @@ Remove an item from the front of the queue.
 Return the ith item in the queue.
 Remove the ith item from the queue.
 
+Binary Trees (NOT BST)
+================
+[Lowest Common Ancestor](http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-tree-part-i.html)
+
+This will also solve find the min path between two keys in Binary Tree.
+
+
+
 
 Hashing
 =============
@@ -127,3 +150,8 @@ Stacks
 #####################################
 
 [Java Interview Questions and Answers](http://java-success.blogspot.ca/2012/04/java-stack-data-structure-interview.html)
+
+Java has Deque (pronouced deck) as a more efficient LIFO Data structure. Better than a stack. You can create a deque which stores the elements in a linkedlist or array internally using LinkedList or ArrayDeque, resp.
+
+Important Points
+-------------------------
