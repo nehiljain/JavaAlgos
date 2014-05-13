@@ -155,3 +155,12 @@ Java has Deque (pronouced deck) as a more efficient LIFO Data structure. Better 
 
 Important Points
 -------------------------
+
+
+Further
+--------------
+ - http://algs4.cs.princeton.edu/13stacks/ how to implement listiterator and arrayiterator
+ - Q + A
+ - JUNIT example, simple intro
+ - Cloning http://www.java-questions.com/Cloning_interview_questions.html, http://javapapers.com/core-java/java-clone-shallow-copy-and-deep-copy/
+ - LCA, RMQ
