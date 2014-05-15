@@ -1,5 +1,5 @@
 
-# ENUM
+ENUM
 =======
 [enum-in-java-example-tutorial](http://javarevisited.blogspot.ca/2011/08/enum-in-java-example-tutorial.html)
 
@@ -21,6 +21,27 @@ Autoboxing
 * Integer a = null; // runtime error primitive type cannot store *null*.
 * the same immutable Integer objects (Java's implementation of valueOf() retrieves a cached values if the integer is between -128 and 127), while Java constructs new objects for each integer outside this range.[Here](http://algs4.cs.princeton.edu/13stacks/)
 
+
+Cloning Objects - Java
+==============================
+
+* Default type cloning in Java is Shallow Cloning.
+* Two types of cloning supported is Deep and Shallow Copy
+* *Shallow Copy*
+    - creates a new instance and returns Object type. you need to explicitly cast it. THis instance is of the same class and has copy of all the fields in it.
+    - you need to implement cloneable to prevent CloneNotSupportedException
+
+* *Deep Copy* - It recursively copies all teh objects from top to bottom.
+* To implement deeo cloning one way is to use Java Object Serialization(JOS). Else do a manual copy which is tedious and difficult to maintain. 
+* Java's default cloning is Shallow cloning. done with clone()
+* Characteristics of Shallow Clone a = clone(b) mean
+    - b.equals(a)
+    - no method of a can modify the value of b
+* disavantages of deep cloning
+    - serilaization is more expensive
+    - not all objects are serializable
+    - Serilaisatrioni si not simple to implement for deep cloned object??
+    - you might fall for cyclic dependencies if not using serialization
 
 
 # Binary Search Tree
