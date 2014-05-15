@@ -1,0 +1,18 @@
+package pkg.nehil.chp3;
+
+pubic class P1{
+	
+	private int[] stackArray = new int[20];
+
+
+
+
+
+
+
+	public static void main(String args[]) {
+
+		
+
+	}
+}
