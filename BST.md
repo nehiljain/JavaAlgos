@@ -34,6 +34,9 @@ Reference Regex.
 
 [8 Useful regex for Web Programming](http://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149)
 
+[Internal Functioning of Regex](https://class.coursera.org/algs4partII-003/lecture/45)
+
+[Data Science Regex in R](https://class.coursera.org/getdata-003/lecture/45)
 
 
 # ENUM
