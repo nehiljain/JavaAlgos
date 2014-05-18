@@ -1,4 +1,4 @@
-#Regex
+Regex
 ======
 
 Reference Regex.
@@ -7,7 +7,7 @@ Reference Regex.
 *   123…    Digits
 *   \d  any Digit
 *   .   any Character
-*   \.  Period
+*   \\.  Period
 *   [abc]   Only a, b, or c
 *   [^abc]  Not a, b, nor c
 *   [a-z]   Characters a to z
@@ -84,7 +84,7 @@ Cloning Objects - Java
     - you might fall for cyclic dependencies if not using serialization
 
 
-# Binary Search Tree
+Binary Search Tree
 ===========================
 
 
@@ -122,7 +122,7 @@ Cloning Objects - Java
     - Worst Case - z
 
 
-# Traversal
+Traversal
 ========================
 
 - IN Order
@@ -190,6 +190,7 @@ version: left-leaning red black tree - LLRB
 * Insertions in a LLRB tree
 * Always attach a new node with red color
 * Insertion cases
+
     - Right child red and left child black : rotate left
     - Left Child, left left grand child red : rotate right
     - both children red : flip color
@@ -202,9 +203,9 @@ version: left-leaning red black tree - LLRB
 Linked List - 
 [Linked-list implementations of collections](http://algs4.cs.princeton.edu/13stacks/) 
     
-    - Implement Iterable
-    - Use a static subclass Node
-    - Use recursion to iterate forward and reverse
+- Implement Iterable
+- Use a static subclass Node
+- Use recursion to iterate forward and reverse
 
 Generics - A way to create a name for a type param
 
@@ -226,6 +227,5 @@ To-do
  - http://algs4.cs.princeton.edu/13stacks/ how to implement listiterator and arrayiterator
  - Q + A
  - JUNIT example, simple intro
- - Cloning http://www.java-questions.com/Cloning_interview_questions.html, http://javapapers.com/core-java/java-clone-shallow-copy-and-deep-copy/
  - LCA, RMQ
 
