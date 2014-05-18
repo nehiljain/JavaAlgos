@@ -8,27 +8,26 @@ import java.util.ArrayDeque;
 
 public class P3<Item> {
 	
-	private static int numberofItem = 0;
+	private static int numberOfItem = 0;
 	private int threshold = 0;
 	private List<Deque<Item>> stacksList = new ArrayList<Deque<Item>>();
 
 	public P3(int n) {
 
-		this.numberofItem = n;
+		this.numberOfItem = n;
 	}
 
 	public void push(Item item) {
-		if (numberofItem == 0 ||
-			numberofItem % threshold == 0) {
+		if (numberOfItem == 0 ||
+			numberOfItem % threshold == 0) {
 			Deque<Item> obj = new ArrayDeque<Item>(threshold);
 			obj.push(item);
 			stacksList.add(obj); 
 		} else {
-			Deque<Item> obj = stacksList.get((int) numberofItem /threshold);
+			Deque<Item> obj = stacksList.get((int) numberOfItem /threshold);
 			obj.push(item);
 		}
 	}
-
 
 	public static void main(String args[]) {
 
