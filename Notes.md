@@ -178,7 +178,7 @@ Hashmap does not guarantee that the order will remain smae over time.
 
 
 
-==========================
+
 Red-Black trees
 ==========================
 
@@ -228,4 +228,47 @@ To-do
  - Q + A
  - JUNIT example, simple intro
  - LCA, RMQ
+
+
+==================
+Design Patterns
+==================
+
+# [Singleton Pattern](http://www.oodesign.com/singleton-pattern.html)
+
+* Only One instance of the class
+* Applications - Centralized Management of resources
+* One instance can be accessed globally, everywhere
+
+## Real Examples
+
+> Logger Class. You do not create instances for every logging operation.
+> Configuration Class. All modules of the application can use the instance.
+
+
+## Intent
+ 
+> Make sure only one instance can be created
+> Provide a global point to object
+
+## Implementation
+
+> private constructor
+> getInstance() - Static public method to get instance. This function creates the unique instance if it is not created yet. 
+
+
+## Related Problems
+
+> Thread safe implementation 
+> Lazy Instantiation using double locking mechanism??
+    > [Double Locking Mechanism in wikipedia](http://en.wikipedia.org/wiki/Double-checked_locking) !! ALARM !!
+    > Early Instantiation
+    > Protected COnstructor
+> Multiple singleton instances if classes loaded by different classloaders access a singleton. !! ALARM!!
+> worry about readResolve() in Serialization.
+
+
+
+
+
 
