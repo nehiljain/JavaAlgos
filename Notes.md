@@ -268,7 +268,7 @@ Design Patterns
 > worry about readResolve() in Serialization.
 
 
-
+# [Factory Pattern](http://www.oodesign.com/factory-pattern.html)
 
 
 
