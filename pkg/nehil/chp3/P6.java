@@ -12,19 +12,15 @@ public class P6 {
 
 		while (!orig.isEmpty()) {
 			int tmp = orig.removeFirst();
-			System.out.println(" :: " + (int) tmp );
+
 			while (!rev.isEmpty() && rev.peekFirst() > tmp) {
 				orig.addFirst(rev.removeFirst());
 			}
 			rev.addFirst(tmp);
 		}
 
-		Iterator it = orig.iterator();
-
-		while (it.hasNext()) {
-			System.out.println(" inside:: " + (int) it.next() );
-		}
-		return orig;
+	
+		return rev;
 	}
 
 
@@ -53,9 +49,9 @@ public class P6 {
 			System.out.println(" 1:: " + (int) it.next() );
 		}
 
-		obj.sortAsc(test);
+		Deque<Integer> test2 = obj.sortAsc(test);
 
-		Iterator it2 = test.iterator();
+		Iterator it2 = test2.iterator();
 
 		while (it2.hasNext()) {
 			System.out.println(" 2:: " + (int) it2.next() );
