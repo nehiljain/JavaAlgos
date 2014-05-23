@@ -2,14 +2,9 @@
 
 package pkg.nehil.chp4;
 
-public class P6<Key, Value> {
+public class P1<Key, Value> {
 
 	private Node root;
-
-	public P6() {
-
-		root = new Node()
-	}
 
 	private class Node {
 		private Key key;
@@ -41,7 +36,7 @@ public class P6<Key, Value> {
 
 
   	public static void main(String args[]) {
-  		P6<Integer, Integer> obj = new P6<Integer, Integer>();
+  		P1<Integer, Integer> obj = new P1<Integer, Integer>();
 
 
   	}
