@@ -39,6 +39,49 @@ Reference Regex.
 [Data Science Regex in R](https://class.coursera.org/getdata-003/lecture/45)
 
 
+Static Methods
+================
+
+* Rule-of-thumb: ask yourself "does it make sense to call this method, even if no Obj has been constructed yet?" If so, it should definitely be static.
+* Instance methods are associated with an object and use the instance variables of that object. This is the default.
+* Static methods use no instance variables of any object of the class they are defined in. Static methods typically take all the data from parameters and compute something from those parameters, with no reference to variables. This is typical of methods which do some kind of generic calculation.
+
+### How to call?
+
+From inside the class
+
+    > methodname()
+
+From outside the class
+    > Classname.methodname()
+
+
+* Use <classname>.<staticmethod>
+* Use <ObjectName>.<staticmethod> in which case the object is ignored instead the classname is used.
+
+
+### Why Static?
+[http://www.leepoint.net/notes-java/flow/methods/50static-methods.html](http://www.leepoint.net/notes-java/flow/methods/50static-methods.html)
+
+* Makes it clear to programmer that it does use the object/instance variables
+* It is more *efficient* as the compiler creates a code which does not have implicit object parameters
+* Documenatation becomes cleaner.
+
+
+
+
+Static Variables
+==================
+
+* static methods cannot access instance variables but can access static variables.
+* static variables are used to define constants whichare associated with the class, Like Math.PI
+* Any moethod can access static variables either static or instance method where as instance variables can only be accessed by instance methods()
+
+
+
+
+
+
 ENUM
 =======
 [enum-in-java-example-tutorial](http://javarevisited.blogspot.ca/2011/08/enum-in-java-example-tutorial.html)
@@ -248,19 +291,19 @@ Design Patterns
 
 ## Intent
  
-> Make sure only one instance can be created
-> Provide a global point to object
+* Make sure only one instance can be created
+* Provide a global point to object
 
 ## Implementation
 
-> private constructor
-> getInstance() - Static public method to get instance. This function creates the unique instance if it is not created yet. 
+* private constructor
+* getInstance() - Static public method to get instance. This function creates the unique instance if it is not created yet. 
 
 
 ## Related Problems
 
-> Thread safe implementation 
-> Lazy Instantiation using double locking mechanism??
+* Thread safe implementation 
+* Lazy Instantiation using double locking mechanism??
     > [Double Locking Mechanism in wikipedia](http://en.wikipedia.org/wiki/Double-checked_locking) !! ALARM !!
     > Early Instantiation
     > Protected COnstructor

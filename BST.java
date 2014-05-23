@@ -365,7 +365,7 @@ private Node lowestCommonAncestor(Node node, Key key1, Key key2) {
 		bstreeInt.inOrder();
 
 		bstreeInt.maxHeight();
-		bstreeInt.hasPathSum(32);
+	
 	}
 
 
