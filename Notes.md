@@ -168,6 +168,8 @@ Binary Search Tree
 Traversal
 ========================
 
+
+
 - IN Order
     - Defn: begins at the left most node and ends at the right most node
     - USE: to retrieve the order in which the nodes were entered.
@@ -176,10 +178,20 @@ Traversal
 - PRE Order
     - Defn: begins at the root node and ends at the right most node
     - USE: if you want to explore the roots before the roots
+
 - POST Order
     - Defn: begins at the left most node and ends at the root node
     - USE: if you want to explore the leaves before the any nodes.
 
+All these are DFS searches. The implementations use a stack or recursion(which uses function calls in memory stack)
+
+DFS - recursion or iteration + stack
+
+BFS - Queue [Read this leetcode Article](http://leetcode.com/2010/09/printing-binary-tree-in-level-order.html)
+
+
+- Breadth First Search
+    - 
 
 
 
@@ -276,6 +288,10 @@ To-do
 ==================
 Design Patterns
 ==================
+
+- Decouple Processing Routines from the Data types. 
+- Avoid Fat Interfaces.
+
 
 # [Singleton Pattern](http://www.oodesign.com/singleton-pattern.html)
 
