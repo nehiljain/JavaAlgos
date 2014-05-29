@@ -77,10 +77,50 @@ Static Variables
 * static variables are used to define constants whichare associated with the class, Like Math.PI
 * Any moethod can access static variables either static or instance method where as instance variables can only be accessed by instance methods()
 
+Generics
+========
+- generally classes or interfaces are call generics.
+- A way to create a name for a type param
+- WHy Use?
+    - Stronger Compile check at compile time
+    - Eliminates casts from the code
+    - Enable generic algorithms
+- Naming conventions
+    - type parameter names are single, uppercase letters
+    - most commonly used type parameter names are:
+        *   E - Element (used extensively by the Java Collections Framework)
+        *   K - Key
+        *   N - Number
+        *   T - Type
+        *   V - Value
+        *   S,U,V etc. - 2nd, 3rd, 4th types
+- Type parameter and Type Arguments.  
+    
+```java
 
+    public class BOX<T> {}
+    //T is a type param
 
+    BOX<Integer> obj;
+    //Integer is a type argument
 
+    List<String>; //is a parameterized type.
+```
+- Raw Types : Box<> is raw type. Stores objects and is pre-generics era. !!Avoid using Raw types
 
+#### Generic methods
+
+- Generic methods are methods that introduce their own type parameters.
+- Static and non-static generic methods are allowed, as well as generic class constructors.
+- syntax for defining and invoking
+
+```java
+public static <K, V> boolean compare(Pair<K, V> p1, Pair<K, V> p2);
+
+boolean same = Util.<Integer, String>compare(p1, p2);
+```
+
+- type inference, allows you to invoke a generic method as an ordinary method, without specifying a type between angle brackets. 
 
 ENUM
 =======
@@ -262,7 +302,7 @@ Linked List -
 - Use a static subclass Node
 - Use recursion to iterate forward and reverse
 
-Generics - A way to create a name for a type param
+
 
 
 
