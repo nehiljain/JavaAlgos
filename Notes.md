@@ -79,6 +79,9 @@ Static Variables
 
 Generics
 ========
+
+[Brilliant Lesson at Oracle's site](http://docs.oracle.com/javase/tutorial/java/generics)
+
 - generally classes or interfaces are call generics.
 - A way to create a name for a type param
 - WHy Use?
