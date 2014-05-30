@@ -125,6 +125,41 @@ boolean same = Util.<Integer, String>compare(p1, p2);
 
 - type inference, allows you to invoke a generic method as an ordinary method, without specifying a type between angle brackets. 
 
+#### Bounded type parameters
+
+[http://docs.oracle.com/javase/tutorial/java/generics/bounded.html](http://docs.oracle.com/javase/tutorial/java/generics/bounded.html)
+
+This is used to restrict the types that can be used as type arguments in a parameterized type. Syntax
+
+```java
+    
+    public class BST<K extends Integer>{}
+
+    //multiple bounds
+    public class BST<K extends Integer & Double & Char> {}
+```
+
+#### Multiple Bounds
+
+```java
+<T extends B1 & B2 & B3>
+```
+
+A type variable with multiple bounds is a subtype of all the types listed in the bound. If one of the bounds is a class, it must be specified first. For example:
+
+```java
+Class A { /* ... */ }
+interface B { /* ... */ }
+interface C { /* ... */ }
+
+class D <T extends A & B & C> { /* ... */ }
+
+//If bound A is not specified first, you get a compile-time error:
+
+class D <T extends B & A & C> { /* ... */ }  // compile-time error
+```
+
+
 ENUM
 =======
 [enum-in-java-example-tutorial](http://javarevisited.blogspot.ca/2011/08/enum-in-java-example-tutorial.html)
