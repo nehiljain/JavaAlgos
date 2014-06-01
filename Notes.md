@@ -1,3 +1,15 @@
+Inheritance in Java
+====================
+
+* you can assign object of one type to object of another, provided the are compatible.
+
+```java
+Object someObject = new Object();
+Integer someInteger = new Integer(10);
+someObject = someInteger;   // OK
+```
+
+
 Regex
 ======
 
@@ -187,6 +199,9 @@ public static <T extends Comparable<T>> int countGreaterThan(T[] anArray, T elem
     return count;
 }
 ```
+
+
+
 
 
 ENUM
