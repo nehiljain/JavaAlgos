@@ -6,5 +6,6 @@
 *.war
 *.ear
 
+*.idea
 *.sublime-project
 *.sublime-workspace
