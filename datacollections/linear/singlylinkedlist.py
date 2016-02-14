@@ -94,6 +94,10 @@ if __name__ == '__main__':
     print(l_list)
     l_list.delete(3)
     print(l_list)
+    l_list.insert(3)
+    l_list.insert(3)
+    l_list.insert(3)
+    print(l_list)
 
 
 
