@@ -1,9 +1,9 @@
 # http://www.geeksforgeeks.org/trie-insert-and-search/
-
+import collections
 class TrieNode(object):
 
   def __init__(self):
-    self.children = [None] * 26 #assuming alphabets and is case insensitive
+    self.children = collections.defaultdict(TrieNode)
     self.is_end_of_word = False
 
 
@@ -50,20 +50,20 @@ class Trie:
 
 def test():
 
-    # Input keys (use only 'a' through 'z' and lower case)
-    keys = ["the","a","there","anaswe","any",
-            "by","their"]
+  # Input keys (use only 'a' through 'z' and lower case)
+  keys = ["the","a","there","anaswe","any",
+          "by","their"]
 
-    # Trie object
-    t = Trie()
+  # Trie object
+  t = Trie()
 
-    # Construct trie
-    for key in keys:
-        t.insert(key)
+  # Construct trie
+  for key in keys:
+      t.insert(key)
 
-    print("{} ---- {}".format("the",t.search("the")))
-    print("{} ---- {}".format("thaw",t.search("thaw")))
-    print("{} ---- {}".format("their",t.search("their")))
+  print("{} ---- {}".format("the",t.search("the")))
+  print("{} ---- {}".format("thaw",t.search("thaw")))
+  print("{} ---- {}".format("their",t.search("their")))
 
 if __name__ == '__main__':
     test()
