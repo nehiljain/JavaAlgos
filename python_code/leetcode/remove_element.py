@@ -16,11 +16,14 @@ Your function should return length = 2, with the first two elements of nums bein
 def solution(ar, val):
 	if not ar:
 		return 0
-
 	size = len(ar)
 	i = 0
 	while i < size:
 		if ar[i] == val:
+			if i == len(ar) - 1:
+				ar[i] == None
+				size = size -1
+				break
 			j = i
 			while ar[j] != None or j < size-1:
 				ar[j], ar[j+1] = ar[j+1], None
@@ -37,4 +40,5 @@ if __name__ == '__main__':
 	assert solution([3,3,3,3,3], 3) == 0
 	assert solution([1,1,1,2,2], 3) == 5
 	assert solution([0,0,0,0,0], 0) == 0
-	assert solution([], 0) == 0
+	assert solution([0], 0) == 0
+	assert solution([4,5], 5) == 1
