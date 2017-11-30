@@ -5,6 +5,13 @@ Given a string containing just the characters '(', ')', '{', '}', '[' and ']', d
 The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
 """
 
+"""
+Review:
+forgot two cases before submission,
+Return True if not False
+If all brackets face the same way I would return True
+"""
+
 def solution(s):
 	if not s:
 		return False
